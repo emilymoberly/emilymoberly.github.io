@@ -1,0 +1,316 @@
+body {
+	margin: 0px;
+	background-color: #ccccff;
+	font-family: system-ui;
+	overflow-y: hidden;
+	animation: sky 11s infinite alternate;
+}
+
+@keyframes sky{
+	0%{
+		background-color: #ccccff;
+	}
+	20%{
+		background-color: #b6b6fd;
+	}
+	38%{
+		background-color: #ff968eb7;
+	}
+	49%{
+		background-color: #d15951;
+	}
+	100%{
+		background-color: #68228b;
+	}
+}
+
+#title {
+	font-size: 4em;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: black;
+}
+
+#container {
+	max-width: 800px;
+    margin: auto;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+	
+#main {
+	width: 100%;
+	transition: 0.5s;
+    position: relative;
+    left: 4%;
+	top: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+	
+
+#buildings {
+	position: relative;
+    bottom: 0px;
+}
+
+#clock {
+	position: relative;
+    right: 88.1%;
+    top: 12%;
+    left: auto;
+    object-fit: scale-down;
+}
+
+#sun {
+	background-color: #ff8c18;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	position:absolute;
+	left: 43%;
+	box-shadow: 0px 0px 20px 0px #ff8c18;
+	animation: sunset 11s infinite alternate;
+}
+
+@keyframes sunset{
+	from {
+		/* starting position */
+		transform: translateY(0px);
+	  }
+	  to {
+		/* ending position */
+		transform: translateY(417px);
+	  }
+}
+
+.hands {
+	position: relative;
+    right: 108.3%;
+    top: 43.5%;
+    left: auto;
+    object-fit: scale-down;
+}
+
+#seconds {
+	position: relative;
+	top: 12%;
+    height: 9%;
+    right: -26%;
+	animation: spin 5s  infinite linear;
+	transform-origin: 32% 69%;
+}
+
+#minutes {
+	position: relative;
+    right: 63%;
+    top: 6.2%;
+	animation: spin 22s infinite linear;
+	transform-origin: right;
+}
+
+#hours {
+	position: relative;
+	top: 3.3%;
+    height: 1.6%;
+    right: -23%;
+	transform-origin: 10%;
+	animation: spin 60s infinite linear;
+}
+
+#myElement{
+	font-size: 1.5em;
+    text-align: center;
+	display: flex;
+	justify-content: center;
+	font-family: 'fantasy';
+}
+
+#Element{
+	font-size: 1.5em;
+    text-align: center;
+	display: flex;
+	justify-content: center;
+	font-family: 'fantasy';
+}
+
+#next{
+	position: relative;
+	width: 80%;
+}
+
+#timing{
+	position: relative;
+    width: 58%;
+    display: flex;
+    justify-content: center;
+    right: -20%;
+    bottom: -6%;
+}
+/*@keyframes spin{
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }*/
+
+@keyframes spin{
+	100%{transform:rotate(360deg)
+	};
+}
+
+#selection-container {
+	position: relative;
+	text-align: center;
+	top: 0px;
+	padding: 10px;
+}
+
+.state-selection {
+	cursor: pointer;
+	height: 135px;
+	margin: 11px;
+}
+
+.state-selection:hover {
+	opacity: 0.6;
+}
+
+.button {
+	position: absolute;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color:black;
+	background: cornsilk;
+	padding: 10px;
+	letter-spacing: 3px;
+	text-align: center;
+	transition: 0.3s;
+	opacity: 0.7;
+}
+
+.button:hover {
+	cursor: pointer;
+	background: #122e1c;
+	transform: rotate(-5deg);
+	color: white;
+	opacity: 1;
+}
+
+#design-responses {
+	right: 20%;
+	bottom: 45%;
+}
+
+/* 
+.outfit-selection {
+	cursor: pointer;
+	height: 100px;
+	margin: 10px;
+}
+
+.outfit-selection:hover {
+	opacity: 0.6;
+}
+
+#head {
+	z-index: 100;
+	position: absolute;
+	height: 250px;
+	top: 5px;
+	left: 150px;
+	transition: 1s;
+}
+
+#head:hover {
+	-webkit-transform: rotate(15deg);
+}
+
+#body {
+	position: absolute;
+	height: 300px;
+	top: 200px;
+	left: 110px;
+	display: block; 
+}
+
+.outfit {
+	z-index: 10;
+	position: absolute;
+	display: none;
+}
+
+#o1 {
+	left: 95px;
+	top: 190px;
+	height: 400px;
+	display: none;
+}
+
+#o2 {
+	top: 220px;
+	height: 370px;
+	left: 80px;
+	display: none;
+}
+
+#o3 {
+	height: 380px;
+	top: 210px;
+	left: 95px;
+	display: none;
+}
+
+#o4 {
+	height: 340px;
+	top: 220px;
+	left: 93px;
+	display: none;
+}
+
+#o5 {
+	height: 370px;
+	top: 215px;
+	left: 85px;
+	display: none;
+}
+
+.button {
+	position: absolute;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: rgb(254, 255, 252);
+	background: rgb(255, 84, 94);
+	padding: 10px;
+	letter-spacing: 3px;
+	text-align: center;
+	transition: 0.3s;
+}
+
+.button:hover {
+	cursor: pointer;
+	background:rgb(255, 44, 54);
+	transform: rotate(-5deg);
+}
+
+#strip-button {
+	right: 20%;
+	bottom: 40%;
+
+}
+
+#design-responses {
+	right: 20%;
+	bottom: 30%;
+}
+
+*/
